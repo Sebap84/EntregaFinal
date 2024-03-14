@@ -1,0 +1,98 @@
+
+.menu{
+    z-index: 1;
+    font-size: medium;
+    padding-bottom: 10px;
+    margin:10px auto; 
+    text-align: center;
+    height: 10vh;
+    position: relative;
+    
+    li{
+        display: inline-block;
+        text-align: right;
+        padding: 10px;
+        a{
+            padding: 20px;
+            color:rgb(59, 59, 233);
+            margin: 10px;
+            text-decoration: none;
+            &:hover{
+                color:white;
+                background-color: rgba(141, 83, 229, 0.71);
+                border-radius: 10%;
+                transform: translate(20px,20px);
+            
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .menuHijo{
+        background-color: rgb(219, 243, 243);
+    }
+}
+
+
+.menuNosotros{
+    font-style: 'Roboto', sans-serif;
+    font-size: medium;
+    list-style: none;
+    top: 10px;
+    text-align: center;
+    padding:20px;
+    li{
+        display: inline-block;
+        text-align: center;
+        padding: 20px;
+        a{
+            padding: 20px;
+            color:rgb(9, 70, 145);
+            margin: 50px;
+            text-decoration: none;
+            &:hover{
+                color:white;
+                background-color: rgb(3, 27, 56);
+            }
+        }
+    }
+}
+
+/* Smartphones (landscape) */
+// @media only screen and (max-width : 321px) {
+    @media only screen and (max-width : 1024px) {
+
+    .menu{
+        z-index: 1;
+        font-size: medium;
+        padding-bottom: 10px;
+        margin:10px auto; 
+        text-align: center;
+        height: 10vh;
+        position: relative;
+        
+        li{
+            display: inline-block;
+            text-align: right;
+            padding: 10px;
+            a{
+                padding: 20px;
+                color:rgb(59, 59, 233);
+                margin: 10px;
+                text-decoration: none;
+                &:hover{
+                    color:white;
+                    background-color: rgba(141, 83, 229, 0.71);
+                    border-radius: 10%;
+                
+                }
+            }
+        }
+    }
+    .menuHijo{
+        background-color: rgb(219, 243, 243);
+    }
+
+  
+    }

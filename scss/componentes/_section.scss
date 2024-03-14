@@ -1,0 +1,287 @@
+@mixin tipoSeccion1($gridArea, $bgImage){
+    
+    margin:20px auto;
+    background-image: $bgImage;
+    height: 50vh;
+    text-align: left;
+    grid-area: $gridArea;
+    width:100%;
+}
+
+@mixin tipoSeccion2($gridArea, $height, $bgColor, $textAlign, $width, $marginRight,$marginLeft,$paddingRight){
+    background-color: $bgColor;
+    grid-area: $gridArea;
+    text-align: $textAlign;
+    @if $height != 0{
+    height: $height;
+
+    }
+
+}
+
+// SECCIONES INDEX.HTML
+
+.seccionImagenPrincipalIndex{
+
+    @include tipoSeccion1 (section1, url(../fotos/FondoIndex.jpg))
+}
+
+.seccion2Index{
+
+    @include tipoSeccion2 (section2,40vh,$fondoSitio,left,0,0,0,0)
+}
+
+.seccion3Index{
+
+    @include tipoSeccion2 (section3,40vh,$fondoSitio,left,0,0,0,0)
+}
+
+.seccion4Index{
+
+    @include tipoSeccion2 (section4,40vh,$fondoSitio,left,0,0,0,0)
+}
+
+/* Smartphones (landscape) */
+@media only screen and (max-width : 1024px) {
+    .seccion2Index{
+
+        @include tipoSeccion2 (section2,90vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion3Index{
+    
+        @include tipoSeccion2 (section3,90vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion4Index{
+    
+        @include tipoSeccion2 (section4,90vh,$fondoSitio,left,0,0,0,0)
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .seccion2Index{
+
+        @include tipoSeccion2 (section2,40vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion3Index{
+    
+        @include tipoSeccion2 (section3,40vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion4Index{
+    
+        @include tipoSeccion2 (section4,40vh,$fondoSitio,left,0,0,0,0)
+    }
+}
+
+@media only screen and (min-width : 1900px) {
+    .seccion2Index{
+
+        @include tipoSeccion2 (section2,20vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion3Index{
+    
+        @include tipoSeccion2 (section3,20vh,$fondoSitio,left,0,0,0,0)
+    }
+    
+    .seccion4Index{
+    
+        @include tipoSeccion2 (section4,20vh,$fondoSitio,left,0,0,0,0)
+    }
+}
+
+// SECCIONES NOSOTROS.HTML
+
+/* Notebooks */
+@media screen and (min-width: 1024px){
+
+
+
+    .seccionOpciones{
+        margin-bottom: 20px;
+        @include tipoSeccion2 (opciones,15vh,$fondoSitio,left,0,0,0,0);
+        
+    }
+
+    .seccionQuienesSomos{
+
+        border-top: solid 1px;
+        padding-top: 10px;
+
+        @include tipoSeccion2 (quienesSomos,70vh,$fondoSitio,left,0,0,0,0)
+        
+        
+    }
+
+    .seccionEquipo{
+
+        @include tipoSeccion2 (equipo,10vh,$fondoSitio,left,0,0,0,0)
+    }
+
+    .seccionCargo1{
+
+        .ImgCargo{
+            width: 50%;
+            height: 250px;
+        }
+        
+
+        @include tipoSeccion2 (cargo1,50vh,$fondoSitio,center,0,0,0,0)
+
+    
+        
+    }
+
+    .seccionCargo2{
+
+        .ImgCargo{
+            width: 50%;
+            height: 250px;
+        }
+
+        @include tipoSeccion2 (cargo2,50vh,$fondoSitio,center,0,0,0,0)
+
+    }
+}
+
+/* Smartphones (landscape) */
+@media only screen and (max-width : 1024px) {
+
+    .seccionOpciones{
+        margin-bottom: 20px;
+        @include tipoSeccion2 (opciones,15vh,$fondoSitio,left,0,0,0,0);
+        
+    }
+
+    .seccionQuienesSomos{
+
+        @include tipoSeccion2 (quienesSomos,180vh,$fondoSitio,left,0,0,0,0)
+    }
+
+    .seccionEquipo{
+
+        @include tipoSeccion2 (equipo,10vh,$fondoSitio,left,0,0,0,0)
+    }
+
+    .seccionCargo1{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+        @include tipoSeccion2 (cargo1,80vh,$fondoSitio,center,0,0,0,0)
+    }
+
+    .seccionCargo2{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+        @include tipoSeccion2 (cargo2,80vh,$fondoSitio,center,0,0,0,0)
+    }
+
+}
+/* Smartphones (portraits) */
+@media screen and (max-width: 480px){
+
+    .seccionQuienesSomos{
+
+        @include tipoSeccion2 (quienesSomos,160vh,$fondoSitio,left,0,0,0,0)
+    }
+
+    .seccionCargo1{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+        @include tipoSeccion2 (cargo1,50vh,$fondoSitio,center,0,0,0,0)
+        
+    
+    }
+
+    .seccionCargo2{
+
+        .ImgCargo{
+            width: 70%;
+            height: 200px;
+        }
+        @include tipoSeccion2 (cargo2,50vh,$fondoSitio,center,0,0,0,0)
+        
+    }
+
+}
+
+
+
+
+// SECCIONES SOLUCIONES.HTML
+
+.seccionSolucionesWeb{
+    // margin-top: 20px;
+    @include tipoSeccion2 (solucionesWeb,35vh,azure,left,30%,0,50px,150px);
+    
+}
+
+/* Smartphones (landscape) */
+@media only screen and (min-width : 321px) {
+    .seccionSolucionesWeb{
+        // margin-top: 20px;
+        @include tipoSeccion2 (solucionesWeb,40vh,azure,left,30%,0,50px,150px);
+        
+    }
+}
+
+/* Smartphones (portraits) */
+@media screen and (max-width: 480px){
+    .seccionSolucionesWeb{
+        // margin-bottom: 20px;
+        @include tipoSeccion2 (solucionesWeb,45vh,azure,left,30%,0,50px,150px);
+        
+    }
+}
+
+
+
+
+.seccionIntegraciones{
+    // margin-bottom: 20px;
+    @include tipoSeccion2 (integraciones,40vh,azure,left,30%,0,50px,150px);
+    
+}
+/* Smartphones (portraits) */
+@media screen and (max-width: 480px){
+    .seccionIntegraciones{
+        // margin-bottom: 20px;
+        @include tipoSeccion2 (integraciones,45vh,azure,left,30%,0,50px,150px);
+        
+    }
+}
+
+.seccionDesktop{
+    // margin-bottom: 20px;
+    @include tipoSeccion2 (desktop,35vh,azure,left,30%,0,50px,150px);
+    
+}
+
+// MAIN PORTAFOLIO.HTML
+
+
+.seccionPortafolio{
+    margin-top: 20px;
+    @include tipoSeccion2 (portafolio,0,azure,left,30%,0,50px,150px);
+    
+}
+
+
+// SECCION CONTACTO.HTML
+
+.seccionContacto{
+    margin-top: 20px;
+    @include tipoSeccion2 (contacto,0,azure,left,30%,0,50px,150px);
+    
+}
